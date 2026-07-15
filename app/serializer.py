@@ -24,3 +24,9 @@ class XmlSerializer(Serializer):
         content = ElementTree.SubElement(root, "content")
         content.text = book.content
         return ElementTree.tostring(root, encoding="unicode")
+
+
+STRATEGIES = {
+    "json": JsonSerializer(),
+    "xml": XmlSerializer(),
+}

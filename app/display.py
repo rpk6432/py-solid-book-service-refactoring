@@ -17,3 +17,9 @@ class ConsoleDisplay(Display):
 class ReverseDisplay(Display):
     def display(self, book: Book) -> None:
         print(book.content[::-1])
+
+
+STRATEGIES = {
+    "console": ConsoleDisplay(),
+    "reverse": ReverseDisplay(),
+}
